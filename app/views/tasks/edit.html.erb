@@ -1,2 +1,8 @@
-<h1>Tasks#edit</h1>
-<p>Find me in app/views/tasks/edit.html.erb</p>
+<h1>Make your changes here</h1>
+<form action="/tasks/<%=@task.id%>" method= "post">
+<label for="task">Edit your Task</label>
+<input type="text" name="tasks[title]" value="<%=@task.title%>">
+<input type="submit">
+<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+<input type="hidden" name="_method" value="patch">
+</form>
