@@ -1,5 +1,10 @@
 <h1>Your to do list.</h1>
+<p><%= link_to "Create New", tasks_new_path%></p>
 <% @tasks.each do |task|%>
 <p><%=task.title%></p>
+<%= link_to "Edit", edit_task_path(task)%>
+<%= link_to "Show", task_path(task)%>
 <%end%>
+
+
 
